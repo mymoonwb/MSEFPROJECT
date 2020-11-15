@@ -43,7 +43,7 @@
         proxy-event="event: click; to: #image-360; as: fade"
         sound="on: click; src: #click-sound"></a-entity>
     </script>
-      <script id="link1" type="text/html">
+    <script id="link1" type="text/html">
       <a-entity class="link"
         geometry="primitive: plane; height: .25; width:.25"
         material="shader: flat; src: ${thumb}"
@@ -91,9 +91,8 @@
       </a-assets>
       <!-- Using the asset management system. -->
       <a-sky src="#sky"></a-sky>
-      
-      </a-box>
-       <a-box
+
+      <a-box
         position="0 1.5 3"
         rotation="0 0 0"
         color="#4CC3D9"
@@ -102,8 +101,8 @@
         visible="false"
         size="3 7 3"
       >
-        </a-box>
-       <a-box
+      </a-box>
+      <a-box
         position="2 1.5  0"
         rotation="0 0 0"
         color="#4CC3D9"
@@ -112,10 +111,9 @@
         visible="false"
         size="-3 -1.5 0"
       >
-        
       </a-box>
-    
-       <a-box
+
+      <a-box
         position="0 -1.5 -3"
         rotation="0 0 0"
         color="#4CC3D9"
@@ -124,7 +122,6 @@
         visible="false"
         size="-3 -1.5 0"
       >
-        
       </a-box>
       <a-gltf-model
         src="#shashank"
@@ -150,8 +147,8 @@
         rotation="0 90 0"
         position="-3 -1.5 0"
       ></a-gltf-model>
-      
-         <img
+
+      <img
         id="cubes"
         crossorigin="anonymous"
         src="https://cdn.glitch.com/ae033895-ae3d-499e-bdfb-223d1595c7e8%2F1.JPG?v=1600897465258"
@@ -161,8 +158,6 @@
         crossorigin="anonymous"
         src="https://cdn.glitch.com/ae033895-ae3d-499e-bdfb-223d1595c7e8%2F2.JPG?v=1600897465355"
       />
-      
-
       <img
         id="sechelt"
         crossorigin="anonymous"
@@ -173,49 +168,51 @@
         crossorigin="anonymous"
         src="https://cdn.glitch.com/ae033895-ae3d-499e-bdfb-223d1595c7e8%2F5811dae0-f8b2-457f-a5d9-0c473aef634d.image.png?v=1600892489838"
       />
-
-      
-
       <audio
         id="click-sound"
         crossorigin="anonymous"
         src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"
       ></audio>
-      
-      
-    <a-entity id="links" layout="type: line; scale = "2 2" margin: .5"  position="0 -2 -2.75"> 
-      
-        <a-entity
-         template="src: #link"
-          data-src="#cubes"
-          data-thumb="#city-thumb"
-          visibility="false"
-          id="turnoff"
-          visible="false"
-        ></a-entity>
 
-        <a-entity
-          template="src: #link"
-          data-src="#city"
-          data-thumb="#city-thumb"
-          id="turnoff"
-          visible="false"
-        ></a-entity>
+      
+      
+    
+      
+      
+      <a-entity layout="type: line; scale = "2 2" margin: .5"
+      position="0 -1 2.5")
 
+      <a-entity
+        template="src: #link"
+        data-src="#cubes"
+        data-thumb="#city-thumb"
+        visibility="false"
+        id="turnoff"
+        visible="false"
+      ></a-entity>
+
+      <a-entity
+        template="src: #link"
+        data-src="#city"
+        data-thumb="#city-thumb"
+        id="turnoff"
+        visible="false"
+      ></a-entity>
+
+      <a-entity
+        template="src: #link"
+        data-src="#sechelt"
+        data-thumb="#city-thumb"
+        id="turnoff"
+        visible="false"
+      ></a-entity>
+
+      <a-entity
+        layout="type: line; margin: .5"
+        rotation="0 270 0"
+        position="2.75 -2 0"
+      >
         <a-entity
-          template="src: #link"
-          data-src="#sechelt"
-          data-thumb="#city-thumb"
-          id="turnoff"
-          visible="false"
-        ></a-entity>
-           </a-entity>
-        
-      <a-entity id="links1"  layout="type: line; margin: .5"  rotation="0 270 0" position="2.75 -2 0">
-      
-      
- <a-entity
-           
           template="src: #link1"
           data-src="#cubes"
           data-thumb="#city-thumb"
@@ -240,19 +237,8 @@
           visible="false"
         ></a-entity>
       </a-entity>
-   
 
-      <a-image
-        position="0 .5 -2 "
-        width="3"
-        height="2"
-        id="image-360"
-        src="#city"
-        visible="false"
-      >
-        
-      </a-image>
-       <a-image
+    <a-image
         position="2 .5  0"
         width="3"
         height="2"
@@ -262,38 +248,13 @@
         rotation="0 270 0"
       >
       </a-image>
-     <a-image
-        position="2 .5  0"
-        width="3"
-        height="2"
-        id="image-3601"
-        src="#city"
-        visible="false"
-        rotation="0 0 0"
-      >
-      </a-image>
-      <a-image
-        position="2 .5  0"
-        width="3"
-        height="2"
-        id="image-3601"
-        src="#city"
-        visible="false"
-        rotation="180 0  0"
-      >
-      </a-image>
-    
+      </a-entity>
      
-    <a-image
-        position="0 .5 3"
-        width="3"
-        height="2"
-        id="image-3601"
-        src="#city"
-        visible="false"
-        rotation="0 180  720"
-      >
-      </a-image>
+      
+     
+
+     
+     
     </a-scene>
   </body>
 </html>
